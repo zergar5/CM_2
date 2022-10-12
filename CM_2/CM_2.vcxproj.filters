@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Files">
+      <UniqueIdentifier>{eaca5805-d76e-4337-9a19-5a35db1427cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Models">
+      <UniqueIdentifier>{4c91576c-6545-4da1-bce8-ece8fe91fff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Methods">
+      <UniqueIdentifier>{c773601b-dee3-421a-9d35-552da6a3856e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Tools">
+      <UniqueIdentifier>{99c311b0-031e-409a-9c23-6d62e83f55bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Input">
+      <UniqueIdentifier>{41f565bb-bc09-4e48-a7a5-ce53606b8611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Output">
+      <UniqueIdentifier>{f856e960-5fa5-4763-a4f7-aa14e37ff467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Files">
+      <UniqueIdentifier>{acbff1cc-c8c9-46b4-bb88-fe77bd40d9bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Models">
+      <UniqueIdentifier>{6f7e4c2e-a223-4cf2-abb3-9b9c966f2b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Methods">
+      <UniqueIdentifier>{f16e5d73-1951-4bdf-9cdb-4115bd3e3565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Tools">
+      <UniqueIdentifier>{d23c6701-9e4b-49eb-9639-8759eee79078}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix_manager.cpp">
+      <Filter>Исходные файлы\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="options_manager.cpp">
+      <Filter>Исходные файлы\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vector_manager.cpp">
+      <Filter>Исходные файлы\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diag_matrix.cpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="gauss-seidel.cpp">
+      <Filter>Исходные файлы\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="jacobi.cpp">
+      <Filter>Исходные файлы\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="iterator.cpp">
+      <Filter>Исходные файлы\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="сalculator.cpp">
+      <Filter>Исходные файлы\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="file_manager.h">
+      <Filter>Файлы заголовков\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix_manager.h">
+      <Filter>Файлы заголовков\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="options_manager.h">
+      <Filter>Файлы заголовков\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_manager.h">
+      <Filter>Файлы заголовков\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diag_matrix.h">
+      <Filter>Файлы заголовков\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="gauss-seidel.h">
+      <Filter>Файлы заголовков\Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="jacobi.h">
+      <Filter>Файлы заголовков\Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="iterator.h">
+      <Filter>Файлы заголовков\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="сalculator.h">
+      <Filter>Файлы заголовков\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="matrix.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="options.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="start_vector.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="vectorF.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="gauss_seidel_output.txt">
+      <Filter>Файлы ресурсов\Output</Filter>
+    </Text>
+    <Text Include="jacobi_output.txt">
+      <Filter>Файлы ресурсов\Output</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
