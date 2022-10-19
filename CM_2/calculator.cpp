@@ -43,9 +43,9 @@ double Calculator::CalcNorm(const vector<double>& vec)
 void Calculator::Multiply(DiagMatrix& diag_matrix, const vector<double>& x, vector<double>& result)
 {
    result.resize(x.size());
-   auto n = diag_matrix.getSize();
-   auto indexes = diag_matrix.getIndexes();
-   auto matrix = diag_matrix.getDiagMatrix();
+   auto& n = diag_matrix.getSize();
+   auto& indexes = diag_matrix.getIndexes();
+   auto& matrix = diag_matrix.getDiagMatrix();
    for (int i = 0; i < n; i++)
    {
       double sum = 0;
