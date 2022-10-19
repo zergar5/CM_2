@@ -135,7 +135,7 @@
     <ClCompile Include="matrix_manager.cpp" />
     <ClCompile Include="options_manager.cpp" />
     <ClCompile Include="vector_manager.cpp" />
-    <ClCompile Include="сalculator.cpp" />
+    <ClCompile Include="calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="diag_matrix.h" />
@@ -146,12 +146,19 @@
     <ClInclude Include="matrix_manager.h" />
     <ClInclude Include="options_manager.h" />
     <ClInclude Include="vector_manager.h" />
-    <ClInclude Include="сalculator.h" />
+    <ClInclude Include="calculator.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="test_F1.txt" />
+    <Text Include="test_F2.txt" />
+    <Text Include="test_matrix1.txt" />
+    <Text Include="test_matrix2.txt" />
+    <Text Include="test_start_vector.txt" />
+    <Text Include="vectorFB.txt" />
     <Text Include="gauss_seidel_output.txt" />
     <Text Include="jacobi_output.txt" />
     <Text Include="matrix.txt" />
+    <Text Include="matrixB.txt" />
     <Text Include="options.txt" />
     <Text Include="start_vector.txt" />
     <Text Include="vectorF.txt" />

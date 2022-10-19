@@ -1,19 +1,12 @@
 #pragma once
 #include "diag_matrix.h"
 
-#include <string>
 #include <vector>
-
-using namespace std;
 
 class Jacobi
 {
-   double relaxation_;
-   double eps_;
-   int max_iter_;
-   vector<double> initial_approximation_;
 public:
-   Jacobi(const string& file_name_approximation, const string& file_name_options);
-   vector<double> Solve(DiagMatrix& diag_matrix, const vector<double>& F);
-   void Log(int i, double residual);
+   static void Solve(DiagMatrix& diag_matrix, const vector<double>& F,
+      vector<double>& x, const double& relaxation, const double& eps, const int& max_iter);
+   static void Log(const int& i, const double& residual);
 };

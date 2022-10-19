@@ -3,7 +3,7 @@
 #include "diag_matrix.h"
 
 void Iterator::NextIteration(const vector<double>& current_x, vector<double>& next_x,
-                             DiagMatrix& diag_matrix, const vector<double>& F, double& relaxation)
+   DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation)
 {
 	auto n = diag_matrix.getSize();
 	auto matrix = diag_matrix.getDiagMatrix();
@@ -13,17 +13,17 @@ void Iterator::NextIteration(const vector<double>& current_x, vector<double>& ne
 		double sum = 0;
 		for (int j = 0; j < 7; j++)
 		{
-			if(indexes[j] >= 0 && indexes[j] < n)
+			if(indexes[j] + i >= 0 && indexes[j] + i < n)
 			{
-				sum += matrix[j][i] * current_x[indexes[j]];
+				sum += matrix[j][i] * current_x[indexes[j] + i];
 			}
-			indexes[j]++;
 		}
 		next_x[i] = current_x[i] + relaxation / matrix[3][i] * (F[i] - sum);
 	}
 }
 
-void Iterator::NextIteration(vector<double>& current_x, DiagMatrix& diag_matrix, const vector<double>& F, double& relaxation)
+void Iterator::NextIteration(vector<double>& current_x, DiagMatrix& diag_matrix, const vector<double>& F,
+	const double& relaxation)
 {
 	auto n = diag_matrix.getSize();
 	auto matrix = diag_matrix.getDiagMatrix();
@@ -33,15 +33,12 @@ void Iterator::NextIteration(vector<double>& current_x, DiagMatrix& diag_matrix,
 		double sum = 0;
 		for (int j = 0; j < 7; j++)
 		{
-			if (indexes[j] >= 0 && indexes[j] < n)
+			if (indexes[j] + i >= 0 && indexes[j] + i < n)
 			{
-				sum += matrix[j][i] * current_x[indexes[j]];
+				sum += matrix[j][i] * current_x[indexes[j] + i];
 			}
-			indexes[j]++;
 		}
 
 		current_x[i] += relaxation / matrix[3][i] * (F[i] - sum);
 	}
 }
-
-

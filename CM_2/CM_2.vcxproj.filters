@@ -43,6 +43,9 @@
     <Filter Include="Исходные файлы\Tools">
       <UniqueIdentifier>{d23c6701-9e4b-49eb-9639-8759eee79078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Tests">
+      <UniqueIdentifier>{22c8ede7-a490-436f-b189-38078971b076}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,7 +72,7 @@
     <ClCompile Include="iterator.cpp">
       <Filter>Исходные файлы\Tools</Filter>
     </ClCompile>
-    <ClCompile Include="сalculator.cpp">
+    <ClCompile Include="calculator.cpp">
       <Filter>Исходные файлы\Tools</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,7 +101,7 @@
     <ClInclude Include="iterator.h">
       <Filter>Файлы заголовков\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="сalculator.h">
+    <ClInclude Include="calculator.h">
       <Filter>Файлы заголовков\Tools</Filter>
     </ClInclude>
   </ItemGroup>
@@ -120,6 +123,27 @@
     </Text>
     <Text Include="jacobi_output.txt">
       <Filter>Файлы ресурсов\Output</Filter>
+    </Text>
+    <Text Include="matrixB.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="vectorFB.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="test_F1.txt">
+      <Filter>Файлы ресурсов\Tests</Filter>
+    </Text>
+    <Text Include="test_F2.txt">
+      <Filter>Файлы ресурсов\Tests</Filter>
+    </Text>
+    <Text Include="test_matrix1.txt">
+      <Filter>Файлы ресурсов\Tests</Filter>
+    </Text>
+    <Text Include="test_matrix2.txt">
+      <Filter>Файлы ресурсов\Tests</Filter>
+    </Text>
+    <Text Include="test_start_vector.txt">
+      <Filter>Файлы ресурсов\Tests</Filter>
     </Text>
   </ItemGroup>
 </Project>

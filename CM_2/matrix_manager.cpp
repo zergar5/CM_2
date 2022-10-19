@@ -41,4 +41,3 @@ void MatrixManager::Read(DiagMatrix& diag_matrix, const string& file_name)
       throw "Error with Matrix file";
    }
 }
-

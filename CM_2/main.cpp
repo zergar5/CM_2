@@ -1,19 +1,26 @@
-﻿
-#include "diag_matrix.h"
+﻿#include "diag_matrix.h"
 #include "gauss-seidel.h"
 #include "jacobi.h"
+#include "options_manager.h"
 #include "vector_manager.h"
 using namespace std;
 
 int main()
 {
-   DiagMatrix diag_matrix = DiagMatrix("matrix.txt");
+   vector<double> x1;
+   vector<double> x2;
    vector<double> F;
+   double relaxation;
+   double eps;
+   int max_iter;
+   DiagMatrix diag_matrix = DiagMatrix();
+   diag_matrix.MemoryAllocated("matrix.txt");
    VectorManager::Read(F, "vectorF.txt");
-   Jacobi jacobi = Jacobi("start_vector.txt", "options.txt");
-   auto jacobi_solution = jacobi.Solve(diag_matrix, F);
-   VectorManager::Write(jacobi_solution, "jacobi_output.txt");
-   GaussSeidel gauss_seidel = GaussSeidel("start_vector.txt", "options.txt");
-   auto gauss_seidel_solution = gauss_seidel.Solve(diag_matrix, F);
-   VectorManager::Write(gauss_seidel_solution, "gauss_seidel_output.txt");
+   VectorManager::Read(x1, "start_vector.txt");
+   x2 = x1;
+   OptionsManager::Read(relaxation, eps, max_iter, "options.txt");
+   Jacobi::Solve(diag_matrix, F, x1, relaxation, eps, max_iter);
+   VectorManager::Write(x1, "jacobi_output.txt");
+   GaussSeidel::Solve(diag_matrix, F, x2, relaxation, eps, max_iter);
+   VectorManager::Write(x2, "gauss_seidel_output.txt");
 }

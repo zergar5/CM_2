@@ -12,7 +12,7 @@ class DiagMatrix
    vector<vector<double>> diag_matrix_;
    vector<int> indexes_;
 public:
-   DiagMatrix(const string& file_name);
+   void MemoryAllocated(const string& file_name);
    void setSize(const int& n);
    int& getSize();
    void setM(const int& m);

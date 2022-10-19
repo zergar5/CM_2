@@ -1,7 +1,7 @@
 #include "diag_matrix.h"
 #include "matrix_manager.h"
 
-DiagMatrix::DiagMatrix(const string& file_name)
+void DiagMatrix::MemoryAllocated(const string& file_name)
 {
    MatrixManager::Read(*this, file_name);
 }
