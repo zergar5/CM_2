@@ -135,7 +135,6 @@
     <ClCompile Include="matrix_manager.cpp" />
     <ClCompile Include="options_manager.cpp" />
     <ClCompile Include="vector_manager.cpp" />
-    <ClCompile Include="calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="diag_matrix.h" />
@@ -146,7 +145,6 @@
     <ClInclude Include="matrix_manager.h" />
     <ClInclude Include="options_manager.h" />
     <ClInclude Include="vector_manager.h" />
-    <ClInclude Include="calculator.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="test_F1.txt" />

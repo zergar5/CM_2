@@ -72,9 +72,6 @@
     <ClCompile Include="iterator.cpp">
       <Filter>Исходные файлы\Tools</Filter>
     </ClCompile>
-    <ClCompile Include="calculator.cpp">
-      <Filter>Исходные файлы\Tools</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_manager.h">
@@ -99,9 +96,6 @@
       <Filter>Файлы заголовков\Methods</Filter>
     </ClInclude>
     <ClInclude Include="iterator.h">
-      <Filter>Файлы заголовков\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="calculator.h">
       <Filter>Файлы заголовков\Tools</Filter>
     </ClInclude>
   </ItemGroup>
