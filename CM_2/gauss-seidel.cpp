@@ -1,5 +1,4 @@
 #include "gauss-seidel.h"
-
 #include "iterator.h"
 
 #include <iostream>

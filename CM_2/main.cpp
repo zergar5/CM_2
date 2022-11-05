@@ -4,6 +4,7 @@
 #include "jacobi.h"
 #include "options_manager.h"
 #include "vector_manager.h"
+
 using namespace std;
 
 int main()
@@ -31,11 +32,11 @@ int main()
    OptionsManager::Read(relaxation, eps, max_iter, block_size, "options.txt");
    block_diag_matrix.setBlockSize(block_size);
 
-   /*Jacobi::Solve(diag_matrix, F, x1, relaxation, eps, max_iter);
-   VectorManager::Write(x1, "jacobi_output.txt");*/
+   Jacobi::Solve(diag_matrix, F, x1, relaxation, eps, max_iter);
+   VectorManager::Write(x1, "jacobi_output.txt");
 
-   /*GaussSeidel::Solve(diag_matrix, F, x2, relaxation, eps, max_iter);
-   VectorManager::Write(x2, "gauss_seidel_output.txt");*/
+   GaussSeidel::Solve(diag_matrix, F, x2, relaxation, eps, max_iter);
+   VectorManager::Write(x2, "gauss_seidel_output.txt");
 
    BlockRelaxation::Solve(block_diag_matrix, F, x3, relaxation, eps, max_iter);
    VectorManager::Write(x3, "block_relaxation_output.txt");

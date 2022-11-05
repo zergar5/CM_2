@@ -4,8 +4,6 @@
 
 #include <vector>
 
-
-
 using namespace std;
 
 class Iterator

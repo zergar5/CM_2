@@ -3,7 +3,7 @@
 
 using namespace std;
 
-static class VectorManager : FileManager
+class VectorManager : FileManager
 {
 public:
    static void Read(vector<double>& vector, const string& file_name);

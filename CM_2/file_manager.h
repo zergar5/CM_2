@@ -3,7 +3,7 @@
 
 #include <string>
 
-static class FileManager
+class FileManager
 {
 public:
    virtual void Read(DiagMatrix& diag_matrix, string& file_name) = 0;

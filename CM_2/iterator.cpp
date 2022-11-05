@@ -1,5 +1,4 @@
 #include "iterator.h"
-
 #include "block_diag_matrix.h"
 #include "diag_matrix.h"
 #include "block_relaxation.h"
@@ -70,7 +69,7 @@ double Iterator::NextIteration(vector<double>& current_x, BlockDiagMatrix& block
 		auto r = vector<double>(block_size);
 		auto k0 = i * block_size;
 		auto k1 = (i + 1) * block_size;
-		BlockRelaxation::CalcR(block_diag_matrix, F, current_x, r, k0, k1);
+		BlockRelaxation::CalcBlockPart(block_diag_matrix, F, current_x, r, k0, k1);
 		auto bi = 0;
 		for (int j = k0; j < k1; j++, bi++)
 		{

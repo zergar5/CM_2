@@ -1,5 +1,4 @@
 #include "jacobi.h"
-
 #include "iterator.h"
 
 #include <iostream>

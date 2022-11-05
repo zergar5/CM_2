@@ -1,10 +1,9 @@
 #include "block_relaxation.h"
+#include "iterator.h"
+#include "slae_solver.h"
 
 #include <iomanip>
 #include <iostream>
-
-#include "iterator.h"
-#include "slae_solver.h"
 
 void BlockRelaxation::Solve(BlockDiagMatrix& block_diag_matrix, const vector<double>& F, vector<double>& x, const double& relaxation, const double& eps, const int& max_iter)
 {
@@ -41,7 +40,7 @@ double BlockRelaxation::CalcCond(const vector<double>& x, double& residual)
    return error / residual;
 }
 
-void BlockRelaxation::CalcR(BlockDiagMatrix& block_diag_matrix, const vector<double>& F, vector<double>& x, vector<double>& r, const int& k0, const int& k1)
+void BlockRelaxation::CalcBlockPart(BlockDiagMatrix& block_diag_matrix, const vector<double>& F, vector<double>& x, vector<double>& r, const int& k0, const int& k1)
 {
    auto& n = block_diag_matrix.getSize();
    auto& matrix = block_diag_matrix.getDiagMatrix();
