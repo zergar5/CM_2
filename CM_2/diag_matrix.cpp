@@ -8,32 +8,32 @@ void DiagMatrix::MemoryAllocated(const string& file_name)
 
 void DiagMatrix::setSize(const int& n)
 {
-   this->_n = n;
+   this->n_ = n;
 }
 
 int& DiagMatrix::getSize()
 {
-   return this->_n;
+   return this->n_;
 }
 
 void DiagMatrix::setM(const int& m)
 {
-   this->_m = m;
+   this->m_= m;
 }
 
 int& DiagMatrix::getM()
 {
-   return this->_m;
+   return this->m_;
 }
 
 void DiagMatrix::setK(const int& k)
 {
-   this->_k = k;
+   this->k_ = k;
 }
 
 int& DiagMatrix::getK()
 {
-   return this->_k;
+   return this->k_;
 }
 
 void DiagMatrix::setIndexes(const vector<int>& indexes)

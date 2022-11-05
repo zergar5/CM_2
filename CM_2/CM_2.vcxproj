@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="block_diag_matrix.cpp" />
+    <ClCompile Include="block_relaxation.cpp" />
     <ClCompile Include="diag_matrix.cpp" />
     <ClCompile Include="gauss-seidel.cpp" />
     <ClCompile Include="iterator.cpp" />
@@ -134,9 +136,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="matrix_manager.cpp" />
     <ClCompile Include="options_manager.cpp" />
+    <ClCompile Include="slae_solver.cpp" />
     <ClCompile Include="vector_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="block_diag_matrix.h" />
+    <ClInclude Include="block_relaxation.h" />
     <ClInclude Include="diag_matrix.h" />
     <ClInclude Include="file_manager.h" />
     <ClInclude Include="gauss-seidel.h" />
@@ -144,9 +149,11 @@
     <ClInclude Include="jacobi.h" />
     <ClInclude Include="matrix_manager.h" />
     <ClInclude Include="options_manager.h" />
+    <ClInclude Include="slae_solver.h" />
     <ClInclude Include="vector_manager.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="block_relaxation_output.txt" />
     <Text Include="test_F1.txt" />
     <Text Include="test_F2.txt" />
     <Text Include="test_matrix1.txt" />

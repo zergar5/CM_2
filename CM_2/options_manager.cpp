@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-void OptionsManager::Read(double& relaxation, double& eps, int& max_iter, const string& file_name)
+void OptionsManager::Read(double& relaxation, double& eps, int& max_iter, int& block_size, const string& file_name)
 {
    try
    {
@@ -10,6 +10,7 @@ void OptionsManager::Read(double& relaxation, double& eps, int& max_iter, const 
       options_in >> relaxation;
       options_in >> eps;
       options_in >> max_iter;
+      options_in >> block_size;
    }
    catch (...)
    {

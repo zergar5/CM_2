@@ -72,6 +72,15 @@
     <ClCompile Include="iterator.cpp">
       <Filter>Исходные файлы\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="block_relaxation.cpp">
+      <Filter>Исходные файлы\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="block_diag_matrix.cpp">
+      <Filter>Исходные файлы\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="slae_solver.cpp">
+      <Filter>Исходные файлы\Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_manager.h">
@@ -96,6 +105,15 @@
       <Filter>Файлы заголовков\Methods</Filter>
     </ClInclude>
     <ClInclude Include="iterator.h">
+      <Filter>Файлы заголовков\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="block_relaxation.h">
+      <Filter>Файлы заголовков\Methods</Filter>
+    </ClInclude>
+    <ClInclude Include="block_diag_matrix.h">
+      <Filter>Файлы заголовков\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="slae_solver.h">
       <Filter>Файлы заголовков\Tools</Filter>
     </ClInclude>
   </ItemGroup>
@@ -138,6 +156,9 @@
     </Text>
     <Text Include="test_start_vector.txt">
       <Filter>Файлы ресурсов\Tests</Filter>
+    </Text>
+    <Text Include="block_relaxation_output.txt">
+      <Filter>Файлы ресурсов\Output</Filter>
     </Text>
   </ItemGroup>
 </Project>

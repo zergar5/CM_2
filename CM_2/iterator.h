@@ -1,7 +1,10 @@
 #pragma once
 #include "diag_matrix.h"
+#include "block_diag_matrix.h"
 
 #include <vector>
+
+
 
 using namespace std;
 
@@ -12,4 +15,6 @@ public:
       DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation);
    static double NextIteration(vector<double>& current_x,
       DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation);
+   static double NextIteration(vector<double>& current_x, BlockDiagMatrix& block_diag_matrix, const vector<double>& F,
+      const double& relaxation);
 };

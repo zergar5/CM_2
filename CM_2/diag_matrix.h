@@ -6,9 +6,10 @@ using namespace std;
 
 class DiagMatrix
 {
-   int _n;
-   int _m;
-   int _k;
+protected:
+   int n_;
+   int m_;
+   int k_;
    vector<vector<double>> diag_matrix_;
    vector<int> indexes_;
 public:

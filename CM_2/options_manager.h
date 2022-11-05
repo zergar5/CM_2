@@ -5,8 +5,8 @@
 
 using namespace std;
 
-static class OptionsManager : FileManager
+class OptionsManager : FileManager
 {
 public:
-   static void Read(double& relaxation, double& eps, int& max_iter, const string& file_name);
+   static void Read(double& relaxation, double& eps, int& max_iter, int& block_size, const string& file_name);
 };
