@@ -1,5 +1,7 @@
 #include "block_diag_matrix.h"
 
+#include <iostream>
+
 void BlockDiagMatrix::LUDecomposition()
 {
    int n = n_ / block_size_;
@@ -17,7 +19,15 @@ void BlockDiagMatrix::LUDecomposition()
 
 void BlockDiagMatrix::setBlockSize(const int& block_size)
 {
-   this->block_size_ = block_size;
+   if (block_size < m_ && n_ % block_size == 0)
+   {
+      this->block_size_ = block_size;
+   }
+   else
+   {
+      cout << "Wrong block size" << endl;
+      exit(-1);
+   }
 }
 
 int& BlockDiagMatrix::getBlockSize()
