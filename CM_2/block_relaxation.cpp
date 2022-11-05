@@ -10,7 +10,7 @@ void BlockRelaxation::Solve(BlockDiagMatrix& block_diag_matrix, const vector<dou
    cout << "Block Relaxation method start" << endl;
    block_diag_matrix.LUDecomposition();
    auto residual = DBL_MAX;
-   for (int i = 0; i <= max_iter && residual > eps; i++)
+   for (int i = 1; i <= max_iter && residual > eps; i++)
    {
       residual = Iterator::NextIteration(x, block_diag_matrix, F, relaxation);
       Log(i, residual);
