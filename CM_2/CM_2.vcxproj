@@ -154,6 +154,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="block_relaxation_output.txt" />
+    <Text Include="matrixB_block.txt" />
+    <Text Include="matrix_block.txt" />
     <Text Include="test_F1.txt" />
     <Text Include="test_F2.txt" />
     <Text Include="test_matrix1.txt" />
@@ -167,6 +169,8 @@
     <Text Include="options.txt" />
     <Text Include="start_vector.txt" />
     <Text Include="vectorF.txt" />
+    <Text Include="vectorFB_block.txt" />
+    <Text Include="vectorF_block.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,12 +18,12 @@ int main()
    int block_size;
 
    auto diag_matrix = DiagMatrix();
-   diag_matrix.MemoryAllocated("matrix.txt");
+   diag_matrix.MemoryAllocated("matrixB_block.txt");
 
    auto block_diag_matrix = BlockDiagMatrix();
-   block_diag_matrix.MemoryAllocated("matrix.txt");
+   block_diag_matrix.MemoryAllocated("matrixB_block.txt");
 
-   VectorManager::Read(F, "vectorF.txt");
+   VectorManager::Read(F, "vectorFB_block.txt");
    VectorManager::Read(x1, "start_vector.txt");
    x2 = x1;
    x3 = x1;

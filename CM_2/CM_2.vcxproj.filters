@@ -160,5 +160,17 @@
     <Text Include="block_relaxation_output.txt">
       <Filter>Файлы ресурсов\Output</Filter>
     </Text>
+    <Text Include="matrix_block.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="vectorF_block.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="matrixB_block.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
+    <Text Include="vectorFB_block.txt">
+      <Filter>Файлы ресурсов\Input</Filter>
+    </Text>
   </ItemGroup>
 </Project>
