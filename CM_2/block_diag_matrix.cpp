@@ -19,7 +19,7 @@ void BlockDiagMatrix::LUDecomposition()
 
 void BlockDiagMatrix::setBlockSize(const int& block_size)
 {
-   if (block_size < m_ && n_ % block_size == 0)
+   if (block_size < 3 + m_ && n_ % block_size == 0)
    {
       this->block_size_ = block_size;
    }
