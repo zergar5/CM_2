@@ -12,7 +12,7 @@ void BlockRelaxation::Solve(BlockDiagMatrix& block_diag_matrix, const vector<dou
    auto residual = DBL_MAX;
    for (int i = 1; i <= max_iter && residual > eps; i++)
    {
-      residual = Iterator::NextIteration(x, block_diag_matrix, F, relaxation);
+      residual = Iterator::NextIteration(block_diag_matrix, x, F, relaxation);
       Log(i, residual);
    }
    auto cond = CalcCond(x, residual);
@@ -40,7 +40,7 @@ double BlockRelaxation::CalcCond(const vector<double>& x, double& residual)
    return error / residual;
 }
 
-void BlockRelaxation::CalcBlockPart(BlockDiagMatrix& block_diag_matrix, const vector<double>& F, vector<double>& x, vector<double>& r, const int& k0, const int& k1)
+void BlockRelaxation::CalcBlockPart(BlockDiagMatrix& block_diag_matrix, vector<double>& x, vector<double>& r, const int& k0, const int& k1)
 {
    auto& n = block_diag_matrix.getSize();
    auto& matrix = block_diag_matrix.getDiagMatrix();

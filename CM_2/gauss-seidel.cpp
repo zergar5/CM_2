@@ -12,7 +12,7 @@ void GaussSeidel::Solve(DiagMatrix& diag_matrix, const vector<double>& F,
    auto residual = DBL_MAX;
    for (int i = 1; i <= max_iter && residual > eps; i++)
    {
-      residual = Iterator::NextIteration(x, diag_matrix, F, relaxation);
+      residual = Iterator::NextIteration(diag_matrix, x, F, relaxation);
       Log(i, residual);
    }
    auto cond = CalcCond(x, residual);

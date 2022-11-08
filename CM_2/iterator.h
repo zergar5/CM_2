@@ -9,10 +9,10 @@ using namespace std;
 class Iterator
 {
 public:
-   static double NextIteration(const vector<double>& current_x, vector<double>& next_x,
-      DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation);
-   static double NextIteration(vector<double>& current_x,
-      DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation);
-   static double NextIteration(vector<double>& current_x, BlockDiagMatrix& block_diag_matrix, const vector<double>& F,
-      const double& relaxation);
+   static double NextIteration(DiagMatrix& diag_matrix, const vector<double>& current_x, vector<double>& next_x,
+      const vector<double>& F, const double& relaxation);
+   static double NextIteration(DiagMatrix& diag_matrix, vector<double>& current_x,
+      const vector<double>& F, const double& relaxation);
+   static double NextIteration(BlockDiagMatrix& block_diag_matrix, vector<double>& current_x, 
+      const vector<double>& F,const double& relaxation);
 };

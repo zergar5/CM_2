@@ -18,7 +18,7 @@ int& DiagMatrix::getSize()
 
 void DiagMatrix::setM(const int& m)
 {
-   this->m_= m;
+   this->m_ = m;
 }
 
 int& DiagMatrix::getM()

@@ -41,5 +41,5 @@ void VectorManager::Write(vector<double>& vector, const string& file_name)
    {
       throw "Error with output Vector file";
    }
-   
+
 }

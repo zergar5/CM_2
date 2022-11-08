@@ -13,7 +13,7 @@ void Jacobi::Solve(DiagMatrix& diag_matrix, const vector<double>& F,
    auto residual = DBL_MAX;
    for (int i = 1; i <= max_iter && residual > eps; i++)
    {
-      residual = Iterator::NextIteration(x, next_x, diag_matrix, F, relaxation);
+      residual = Iterator::NextIteration(diag_matrix, x, next_x, F, relaxation);
       x = next_x;
       Log(i, residual);
    }

@@ -3,8 +3,8 @@
 #include "diag_matrix.h"
 #include "block_relaxation.h"
 
-double Iterator::NextIteration(const vector<double>& current_x, vector<double>& next_x,
-   DiagMatrix& diag_matrix, const vector<double>& F, const double& relaxation)
+double Iterator::NextIteration(DiagMatrix& diag_matrix, const vector<double>& current_x, vector<double>& next_x,
+    const vector<double>& F, const double& relaxation)
 {
 	auto& n = diag_matrix.getSize();
 	auto& matrix = diag_matrix.getDiagMatrix();
@@ -28,7 +28,7 @@ double Iterator::NextIteration(const vector<double>& current_x, vector<double>& 
 	return sqrt(residual) / sqrt(sum_of_sq_vec_F);
 }
 
-double Iterator::NextIteration(vector<double>& current_x, DiagMatrix& diag_matrix, const vector<double>& F,
+double Iterator::NextIteration(DiagMatrix& diag_matrix, vector<double>& current_x, const vector<double>& F,
 	const double& relaxation)
 {
 	auto& n = diag_matrix.getSize();
@@ -53,7 +53,7 @@ double Iterator::NextIteration(vector<double>& current_x, DiagMatrix& diag_matri
 	return sqrt(residual) / sqrt(sum_of_sq_vec_F);
 }
 
-double Iterator::NextIteration(vector<double>& current_x, BlockDiagMatrix& block_diag_matrix, const vector<double>& F,
+double Iterator::NextIteration(BlockDiagMatrix& block_diag_matrix, vector<double>& current_x,  const vector<double>& F,
 	const double& relaxation)
 {
 	auto& n = block_diag_matrix.getSize();
@@ -69,7 +69,7 @@ double Iterator::NextIteration(vector<double>& current_x, BlockDiagMatrix& block
 		auto r = vector<double>(block_size);
 		auto k0 = i * block_size;
 		auto k1 = (i + 1) * block_size;
-		BlockRelaxation::CalcBlockPart(block_diag_matrix, F, current_x, r, k0, k1);
+		BlockRelaxation::CalcBlockPart(block_diag_matrix, current_x, r, k0, k1);
 		auto bi = 0;
 		for (int j = k0; j < k1; j++, bi++)
 		{

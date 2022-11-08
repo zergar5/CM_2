@@ -1,4 +1,6 @@
-﻿#include "block_relaxation.h"
+﻿#include <chrono>
+
+#include "block_relaxation.h"
 #include "diag_matrix.h"
 #include "gauss-seidel.h"
 #include "jacobi.h"
@@ -6,6 +8,7 @@
 #include "vector_manager.h"
 
 using namespace std;
+using namespace chrono;
 
 int main()
 {
@@ -19,12 +22,12 @@ int main()
    int block_size;
 
    auto diag_matrix = DiagMatrix();
-   diag_matrix.MemoryAllocated("matrixB_block.txt");
+   diag_matrix.MemoryAllocated("matrix_block.txt");
 
    auto block_diag_matrix = BlockDiagMatrix();
-   block_diag_matrix.MemoryAllocated("matrixB_block.txt");
+   block_diag_matrix.MemoryAllocated("matrix_block.txt");
 
-   VectorManager::Read(F, "vectorFB_block.txt");
+   VectorManager::Read(F, "vectorF_block.txt");
    VectorManager::Read(x1, "start_vector.txt");
    x2 = x1;
    x3 = x1;
@@ -39,5 +42,6 @@ int main()
    VectorManager::Write(x2, "gauss_seidel_output.txt");
 
    BlockRelaxation::Solve(block_diag_matrix, F, x3, relaxation, eps, max_iter);
+
    VectorManager::Write(x3, "block_relaxation_output.txt");
 }
