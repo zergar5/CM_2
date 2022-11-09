@@ -24,7 +24,7 @@ void Jacobi::Solve(DiagMatrix& diag_matrix, const vector<double>& F,
 
 void Jacobi::Log(const int& i, const double& residual)
 {
-   cout << "Iteration number: " << i  << " Residual: " << fixed << setprecision(16) << residual << "\r";
+   cout << "Iteration number: " << i << " Residual: " << fixed << setprecision(16) << residual << "\r";
 }
 
 double Jacobi::CalcCond(const vector<double>& x, double& residual)

@@ -35,8 +35,8 @@ int main()
    OptionsManager::Read(relaxation, eps, max_iter, block_size, "options.txt");
    block_diag_matrix.setBlockSize(block_size);
 
-   Jacobi::Solve(diag_matrix, F, x1, relaxation, eps, max_iter);
-   VectorManager::Write(x1, "jacobi_output.txt");
+   /*Jacobi::Solve(diag_matrix, F, x1, relaxation, eps, max_iter);
+   VectorManager::Write(x1, "jacobi_output.txt");*/
 
    GaussSeidel::Solve(diag_matrix, F, x2, relaxation, eps, max_iter);
    VectorManager::Write(x2, "gauss_seidel_output.txt");
